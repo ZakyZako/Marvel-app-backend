@@ -21,6 +21,9 @@ app.use("/user", useRoutes);
 
 const comicsRoutes = require("./routes/comic");
 app.use(comicsRoutes);
+
+const favoriteRoutes = require("./routes/favorite");
+app.use(favoriteRoutes);
 app.get("/", (req, res) => {
   res.json({ message: "Hi" });
 });
