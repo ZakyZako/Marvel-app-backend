@@ -9,11 +9,12 @@ router.get("/characters", async (req, res) => {
   const newData = data.results.map(character => {
     return {
       id: character.id,
+
       name: character.name,
       desc: character.description,
       imgPath:
         character.thumbnail.path +
-        "/portrait_medium." +
+        "/standard_xlarge." +
         character.thumbnail.extension
     };
   });
@@ -31,7 +32,7 @@ router.get("/character/:id", async (req, res) => {
       title: characterComic.title,
       imgPath:
         characterComic.thumbnail.path +
-        "/standard_medium." +
+        "/standard_xlarge." +
         characterComic.thumbnail.extension
     };
   });

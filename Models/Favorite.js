@@ -5,12 +5,7 @@ const Favorite = mongoose.model("Favorite", {
   marvelId: String,
   imagePath: String,
   description: String,
-  type: String,
-
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
-  }
+  type: String
 });
 
 module.exports = Favorite;
